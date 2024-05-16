@@ -1,0 +1,36 @@
+Console was cleared. debugger eval code:1:9
+undefined
+console
+Console { assert: assert(), clear: clear(), count: count(), countReset: countReset(), debug: debug(), error: error(), info: info(), log: log(), table: table(), trace: trace(), … }
+
+console.log("Norway")
+Norway debugger eval code:1:9
+undefined
+console.error("Alert");
+Alert debugger eval code:1:9
+undefined
+console.warn('Warning');
+Warning debugger eval code:1:9
+undefined
+console.table({name:'Zolile', emai:'Tibane'})
+console.table() debugger eval code:1:9
+(index)	Values
+name	Zolile
+emai	Tibane
+undefined 
+
+
+console.group('simple')
+ console.log(1+"x");
+console.error('Alert');
+console.warn('warning');
+console.groupEnd()
+simple debugger eval code:1:9
+1x debugger eval code:2:10
+Alert debugger eval code:3:9
+warning debugger eval code:4:9
+undefined
+
+​const styles ="padding:10px; background:black;color:green"; 
+undefined
+console.log("%cHello Jozi", styles) 

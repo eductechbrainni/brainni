@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainni</title>
+ <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Brainni</div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="nav">
+                <a href="#about" onclick="toggleMenu()">About Us</a>
+                <a href="#services" onclick="toggleMenu()">Services</a>
+                <a href="#how-it-works" onclick="toggleMenu()">How It Works</a>
+                <a href="#contact" onclick="toggleMenu()">Contact Details</a>
+            </div>
+        </div>
+
+        <a href="https://wa.me/27768733043" class="meet-tutor-btn">
+            Meet a Tutor
+        </a>
+
+        <div class="slideshow-container">
+            <div class="slides">
+                <img src="./images/little-boy-doing-school-online.jpg" alt="Slide 1">
+                <div class="slide-content">
+                    <h2>Tailored Education</h2>
+                    <p>Creating customized education solutions to meet diverse learning needs.</p>
+                    <a href="https://wa.me/27768733043">Learn More</a>
+                </div>
+            </div>
+            <div class="slides">
+                <img src="./images/media.jpg" alt="Slide 2">
+                <div class="slide-content">
+                    <h2>Innovative Research</h2>
+                    <p>Conducting extensive research to develop cutting-edge educational tools.</p>
+                    <a href="https://wa.me/27768733043">Learn More</a>
+                </div>
+            </div>
+            <div class="slides">
+                <img src="./images/portrait-little-kids-using-vr-headsets-having-fun.jpg" alt="Slide 3">
+                <div class="slide-content">
+                    <h2>Interactive Learning</h2>
+                    <p>Utilizing VR and other technologies to enhance student engagement.</p>
+                    <a href="https://wa.me/27768733043">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div id="about" class="section black-bg">
+                <h2>About Us</h2>
+                <p>We aim to create tailor-made education solutions by reading, researching, recording, and teaching children.</p>
+                <p>Draglearn: Born from a passion for education. Two former students, once struggling, now driven to make a difference.</p>
+                <p>Witnessing the plight of kids lacking tailored lessons ignited our vision: personalized learning for every child.</p>
+                <p>We're dedicated to revolutionizing education, which is why we've carefully developed Draglearn specifically with you and your child in mind, beginning with Grade 3.</p>
+                <p>We believe every child deserves the best, and our platform is inclusive, catering to each individual's needs.</p>
+                <p>Join us in our mission to revolutionize education and shape a brighter future for our country by offering tailored learning experiences for all.</p>
+            </div>
+            <div id="services" class="section h70">
+                <h2>Services</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Tailored Education</h3>
+                        <p>We tailor-make our education to grow with your child, ensuring a personalized learning journey.</p>
+                    </div>
+                    <div class="card black">
+                        <h3>Chatbot Learning</h3>
+                        <p>Interactive chatbot teaching methods engage and adapt to your child's learning pace.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Qualified Teachers</h3>
+                        <p>Qualified teachers back our system, ensuring your child learns the right content accurately.</p>
+                    </div>
+                    <div class="card black">
+                        <h3>Continual Growth</h3>
+                        <p>Our platform evolves with your child, offering advanced learning pathways as they progress.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="how-it-works" class="how-it-works-section">
+                <h2>How It Works</h2>
+                <div class="cards-container">
+                    <div class="how-it-works-card">
+                        <div class="card-icon"><img src="/images/ABC.png" alt="Icon 1"></div>
+                        <h3>Child Assigned</h3>
+                    </div>
+                    <div class="how-it-works-card">
+                        <div class="card-icon"><img src="/images/Resume.png" alt="Icon 2"></div>
+                        <h3>Custom Curriculum</h3>
+                    </div>
+                    <div class="how-it-works-card">
+                        <div class="card-icon"><img src="/images/Module.png" alt="Icon 3"></div>
+                        <h3>Adaptive Algorithms</h3>
+                    </div>
+                    <div class="how-it-works-card">
+                        <div class="card-icon"><img src="/images/Classroom.png" alt="Icon 4"></div>
+                        <h3>Personalized Lessons</h3>
+                    </div>
+                </div>
+            </div>
+            <div id="contact" class="section h70">
+                <h2>Contact Details</h2>
+                <p>Email: eductechbrainni@gmail.com</p>
+                <p>Phone: +27 76 873 3043</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 eduTech Startup. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.querySelectorAll('.slides');
+            slides.forEach((slide, index) => {
+                slide.style.display = 'none';
+            });
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = 'block';
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        function toggleMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
